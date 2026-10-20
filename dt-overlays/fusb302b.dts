@@ -21,7 +21,7 @@
 		    reg = <0x22>;              /* I2C address of FUSB302 */
 
 		    interrupt-parent = <&gpio>;
-		    interrupts = <17 2>;        /* GPIO 17, level-low (2) – adjust */
+		    interrupts = <17 8>;        /* GPIO 17, IRQ_TYPE_LEVEL_LOW (8): INT_N is open-drain, active low */
 
 		    connector {
 		      compatible = "usb-c-connector";

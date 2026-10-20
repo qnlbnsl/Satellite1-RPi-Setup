@@ -1,3 +1,11 @@
+satellite1-rpi-setup (1.4-1+hermes2) trixie; urgency=medium
+
+  * fusb302b overlay: declare the FUSB302 interrupt as level-low (8), as the
+    driver requests it. It was falling-edge (2), so after an unbind the
+    driver can no longer map GPIO 17 ("irq: type mismatch") and probe fails.
+
+ -- Kunal Bansal <qnlbnsl@gmail.com>  Tue, 20 Oct 2026 00:00:00 +0000
+
 satellite1-rpi-setup (1.4-1+hermes1) trixie; urgency=medium
 
   * Depend on the stock Raspberry Pi OS kernel (linux-image-rpi-v8 >= 6.18.42),
