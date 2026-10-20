@@ -24,8 +24,9 @@ else
 $(error BUILD_KIND must be either "local" or "public")
 endif
 
-# Stable kernel meta package for this distribution.
-KERNEL_PKG         := linux-image-fusb302-$(DISTRIBUTION)-rpi-v8
+# Kernel meta package for this distribution. The stock Raspberry Pi OS kernel
+# carries the FUSB302 and TCPM drivers from 6.18.42.
+KERNEL_PKG         := linux-image-rpi-v8 (>= 1:6.18.42)
 
 # Output dir for the built .deb (inside this package dir)
 OUT_DIR            ?= ${PWD}/out/$(BUILD_KIND)

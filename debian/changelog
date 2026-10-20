@@ -1,3 +1,11 @@
+satellite1-rpi-setup (1.4-1+hermes1) trixie; urgency=medium
+
+  * Depend on the stock Raspberry Pi OS kernel (linux-image-rpi-v8 >= 6.18.42),
+    which ships the FUSB302 and TCPM drivers, instead of the custom
+    linux-image-fusb302-trixie-rpi-v8 kernel.
+
+ -- Kunal Bansal <qnlbnsl@gmail.com>  Tue, 20 Oct 2026 00:00:00 +0000
+
 satellite1-rpi-setup (1.4-1) trixie; urgency=medium
 
   * Fix the AHT20 i2c-sensor overlay syntax and migrate invalid entries.
